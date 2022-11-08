@@ -1,7 +1,15 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 # Zomato--Food-Delivery-analysis
+## Tech Stack used: 
+- Python(Selenium, BeautifulSoup, Flask, Pickle, Pandas, Numpy) 
+- Machine Learning Models(Linear and Regression)
+- HTML, Bootstrap
+- SQL
+- Microsoft Excel
+- Powerpoint
 ### Data Analysis with Zomato Bangalore data
 #### Dataset has been Scrapped using python libraries Selenium and BeautifulSoup, overall 1000+ restaurants data has been scrapped for Bangalore city it can be found in my reprository.
+
 #### The dataset contains 2 dataset files i.e:- zomato_1_cleand.csv and zomato_2_cleand.csv. These files used for Zomato analysis.
 ## Analysis
 - Area-wise distribution of restaurant
