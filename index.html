@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+ 
+    <head>
+
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="C:\Users\91971\Desktop\maha project dvitiya\templates\style.css">
+        <meta charset="UTF-8">
+        <title >Zomato Recommendation model</title>
+
+        
+
+        <style>
+
+        body{
+        background:url('https://thumbs.dreamstime.com/b/focus-bangalore-city-over-road-map-bangalore-city-over-road-map-india-102916995.jpg');
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:100% 100%;
+        }
+            input[type="submit"]{
+                font-size: 15px;
+                background-color: #de4545;
+                color: #FFFFFF;
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    <body >
+        <centre>
+        <h1 style="border:15px solid grey; width:500px ;border-width: 2px ;font-family: Quicksand; border-radius: 5px; text-align: center;"> Zomato Recommendation Model</h1>
+        </centre>
+        <style>
+        form {
+            margin: auto;
+            width: 35%;
+        }
+        .result {
+            margin: auto;
+            width: 35%;
+            border: 1px solid #ccc;
+        }
+        </style>
+        <form action="/predict" method="post">
+            <fieldset  style="background-color:whitesmoke">
+                <legend><u> Input values:</u></legend>
+                Cuisine: 
+                <input style='width:50%;height: 10px;
+                padding:12px 20px;
+                margin:8px 0;
+                box-sizing: border-box ; border-color:#DC143C' name="Cuisine" type="text" required>
+                <br>
+                <br> Location:
+                <input style='width:50%;height: 10px;
+                padding:12px 20px;
+                margin:8px 0;
+                box-sizing: border-box ; border-color:#DC143C'id= 'Location' name="Preferred_Location" type="text" required>
+                <br>
+                <br> Price for one:
+                <input style='width:50%;height: 10px;
+                padding:12px 20px;
+                margin:8px 0;
+                box-sizing: border-box ; border-color:#DC143C' name="Price for one" type="number" required>
+                <br>
+                <br>
+                <input type="Submit">
+            </fieldset>
+            <fieldset style="background-color:whitesmoke">
+                <legend ><u>Based on your Preferred_Location :</u></legend>
+                <br>
+                {{ prediction_text }}
+                <br>
+                <br>
+                {{ Avgfor1 }}
+                <br>
+                <br>
+                {{Q3}}
+                <br>
+                <br>
+                {{Q4}}
+
+            </fieldset>
+            <fieldset style="background-color:whitesmoke">
+                <legend><u>Recommendations :</u></legend>
+                <br>
+                {{Q2_1}}
+                <br>
+                <br>
+                {{Q2_2}}
+                <br>
+            </fieldset>
+                
+        </form>
+        <br>
+    </body>
+</html>
